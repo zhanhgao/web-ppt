@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Spacetree - MultiTree</title>
+
+  <!-- CSS Files -->
+  <link type="text/css" href="base.css" rel="stylesheet" />
+  <link type="text/css" href="index.css" rel="stylesheet" />
+
+  <!--[if IE]><script language="javascript" type="text/javascript" src="../../Extras/excanvas.js"></script><![endif]-->
+
+  <!-- JIT Library File -->
+  <script language="javascript" type="text/javascript" src="jit.js"></script>
+
+  <!-- util File -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <!-- Example File -->
+  <script language="javascript" type="text/javascript" src="base.js"></script>
+  <script language="javascript" type="text/javascript" src="index.js"></script>
+  <style media="screen">
+  html,body{
+    /* background-color: rgb(224,234,239 ); */
+    background-color: #999;
+  }
+  #box{
+    background-color: rgba(255, 255, 255,.9);
+    border: none !important;
+    text-align: left;
+    overflow-y: scroll;
+    height: 300px !important;
+  }
+  ul{list-style-type:disc;}
+  #center-container{position: relative;}
+  #log{position: relative;top: 0;display: none;}
+  .sure{
+    background-color: #00bbff;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 20px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  #center-container,#infovis{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: rgb(224,234,239 );
+  }
+  </style>
+</head>
+
+<body >
+
+  <div id="container">
+
+    <!-- log -->
+    <div id="log"></div>
+
+    <!-- 编辑列表 -->
+    <div id="box" style="border:1px solid red; height:200px" contenteditable="true"></div>
+
+    <!-- 确定按钮 -->
+    <p class="sure">更新</p>
+
+    <!-- 画布容器 -->
+    <div id="center-container">
+      <div id="infovis"></div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>
